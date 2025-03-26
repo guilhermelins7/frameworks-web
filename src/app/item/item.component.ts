@@ -11,6 +11,7 @@ export class ItemComponent {
   emEdicao = false;
   @Input() tarefa: Tarefa = new Tarefa('', false);
   @Output() removerTarefa = new EventEmitter<Tarefa>(); // Evento para remover a tarefa;
+  @Output() modificaTarefa = new EventEmitter();
 
   onRemoverTarefa() {
     this.removerTarefa.emit(this.tarefa); // Emite a tarefa a ser removida

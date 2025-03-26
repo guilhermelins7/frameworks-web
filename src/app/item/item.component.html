@@ -3,7 +3,7 @@
     [id]="tarefa.descricao"
     type="checkbox"
     [checked]="tarefa.statusRealizada"
-    (change)="tarefa.statusRealizada = !tarefa.statusRealizada"
+    (change)="tarefa.statusRealizada = !tarefa.statusRealizada; modificaTarefa.emit();"
   />
   <label [for]="tarefa.descricao">{{ tarefa.descricao }}</label>
   <div *ngIf="!emEdicao" class="btn-wrapper">
@@ -22,7 +22,7 @@
       <button class="btn" (click)="emEdicao = false">Cancelar</button>
       <button
         class="btn-save"
-        (click)="tarefa.descricao = editedItem.value; emEdicao = false"
+        (click)="tarefa.descricao = editedItem.value; emEdicao = false; modificaTarefa.emit()"
       >
         Salvar
       </button>

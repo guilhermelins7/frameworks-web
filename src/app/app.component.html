@@ -13,6 +13,7 @@
       <app-item
         [tarefa]="tarefaDoLoop"
         (removerTarefa)="DELETE_tarefa($event)"
+        (modificaTarefa)="UPDATE_tarefa(tarefaDoLoop)"
       ></app-item>
     </li>
   </ul>
