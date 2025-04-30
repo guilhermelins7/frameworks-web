@@ -7,10 +7,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "struct": "npm i express --save && npm i nodemon -g --save-dev && npm i mongoose --save && npm i jsonwebtoken --save",
+    "start": "nodemon index mongodb+srv://guilherme237057:dados135@cluster0.atwgt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   },
   "dependencies": {
     "express": "^4.21.2",
-    "mongoose": "^8.13.0"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.1"
   }
 }
